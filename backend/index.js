@@ -3,7 +3,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const schedule = require("node-schedule");
-const { PORT, MONGODB_URL } = require("./constants/database");
+const MONGODB_URL = process.env.MONGODB_URL;
+const PORT = process.env.PORT;
 
 const { distributeIncome } = require("./controllers/dailyClubController");
 
